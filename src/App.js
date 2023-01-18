@@ -9,7 +9,7 @@ import { AiFillStar } from 'react-icons/ai';
 
 function App() {
   const [isExploding, setIsExploding] = useState(false);
-  const [cumple, setCumple] = useState("cumplemes");
+  const [cumple, setCumple] = useState("Feliz cumplemes");
 
   let x = new Date("Sun Dec 18 2022 16:00:00");
   let y = new Date();
@@ -24,11 +24,14 @@ function App() {
 
     if (today === 18) {
       setIsExploding(true);
-    }
+    } 
+
     if (today === 18 && month === 11 && year > 2022) {
-      setCumple("cumpleaños");
+      setCumple("Feliz cumpleaños");
+    } else if (today === 18){
+      setCumple("Feliz cumplemes");
     } else {
-      setCumple("cumplemes");
+      setCumple("Felicidades");
     }
   });
 
@@ -46,7 +49,7 @@ function App() {
           alignItems: "center",
         }}
       >
-        <h1 className="cumple">¡Feliz {cumple}!</h1>
+        <h1 className="cumple">¡{cumple}!</h1>
         <h2 className="dias">
           ¡Hace {diffInDays} días que sos campeón del mundo!
         </h2>
