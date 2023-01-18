@@ -2,6 +2,10 @@ import "./App.css";
 
 import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
+import { AiFillStar } from 'react-icons/ai';
+
+
+
 
 function App() {
   const [isExploding, setIsExploding] = useState(false);
@@ -46,6 +50,11 @@ function App() {
         <h2 className="dias">
           ¡Hace {diffInDays} días que sos campeón del mundo!
         </h2>
+        <div style={{display:'flex', flexDirection:'row', alignContent:'center', marginRight:'30px'}}>
+          <div><AiFillStar className="stars" /></div>
+          <div><AiFillStar className="stars" /></div>
+          <div><AiFillStar className="stars" /></div>
+          </div>
         {isExploding && (
           <Confetti
             width={window.innerWidth}
